@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>E-Course</title>
+</head>
+<body>
+    <div class="header">
+        <a href="#default" class="logo" id="logo">E-Course</a>
+        <div class="header-right">
+            <a href="#login" id="login" onclick="document.getElementById('id01').style.display='block'">Login</a>
+            <a href="#signup" id="signup" onclick="document.getElementById('id02').style.display='block'">Sign Up</a>
+        </div>
+
+        <div id="id01" class="modal">
+            <form action="/account/login" method="POST" class="modal-content">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="images/logo-user.png" alt="logo-us" class="logo-us">
+                </div>
+                <div class="container">
+                    <label for="email"><b>E-mail:</b></label>
+                    <input type="email" name="email" placeholder="Enter E-mail" required>
+              
+                    <label for="password"><b>Password:</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+                    <label for="role"><b>Role</b></label>
+                    <select name="role" id="">
+                        <option value="">Pilih Role</option>
+                        <% roles.forEach(role => { %>
+                            <option value="<%= role.id %>"><%= role.role_name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                
+                <div class="container">
+                    <button type="submit" onclick="document.getElementById('id01').style.display='none'" class="loginbtn">Login</button>
+              
+                </div>
+            </form>
+        </div>
+
+        <div id="id02" class="modal">
+            <form action="/account/register" method="POST" class="modal-content2">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="images/logo-user.png" alt="logo-us" class="logo-us">
+                </div>
+                <div class="container">
+                    <label for="nama"><b>Name:</b></label>
+                    <input type="text" name="full_name" placeholder="Enter Name" required>
+
+                    <label for="email"><b>E-mail:</b></label>
+                    <input type="email" name="email" placeholder="Enter E-mail" required>
+                    
+                    <label for="alamat"><b>Alamat:</b></label>
+                    <input type="text" name="address" placeholder="Enter Address" required>
+
+                    <label for="phone"><b>Phone:</b></label>
+                    <input type="tel" name="phone_number" placeholder="Enter Phone Number" required>
+
+                    <label for="psw"><b>Password:</b></label>
+                    <input type="password" name="password" id="pass" placeholder="Enter Password" required>
+
+                    <label for="cpsw"><b>Confirm Password:</b></label>
+                    <input type="password" id="cpsw" placeholder="Confirm Password" required>
+                    <span id="msg" style="display:none">Password Tidak Sama</span><br/>
+                    <label for="role"><b>Role</b></label>
+                    <select name="role" id="">
+                        <option value="">Pilih Role</option>
+                        <% roles.forEach(role => { %>
+                            <option value="<%= role.id %>"><%= role.role_name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div class="container">
+                    <button type="submit" id="register" onclick="document.getElementById('id01').style.display='none'" class="loginbtn">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="wel">
+        <h1>Learn <br> Without <br> Limits</h1>
+        <img src="images/learn.png" alt="kids-learning">
+        <p>Build skills with courses from world-class <br> companies and universities</p>
+        <button class="btnjoin">Join For Free</button>
+    </div>
+
+    <div class="content">
+        <article class="ecourse-all">
+            <h3>Why E-Course?</h3>
+            <article class="ecourse-why">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac porttitor ligula. Sed sodales lorem tellus, et facilisis nunc eleifend quis. Integer in dignissim nisi. Sed eu viverra metus, nec luctus nisi. Morbi sodales dapibus massa id tristique. Etiam eget mi nunc. Fusce condimentum erat quis iaculis aliquam. Curabitur eu sapien ligula. Proin venenatis sit amet odio vel dignissim. Donec molestie porta felis, vel faucibus libero lacinia in. 
+                    <br><br>
+                    Praesent vehicula, eros sit amet pellentesque cursus, neque turpis molestie magna, in ultricies sapien metus vel justo. Morbi elit lacus, sagittis ut mi non, ultrices finibus nisi. Donec sed mauris vel ligula placerat molestie. Aliquam condimentum at quam ut sodales. Nam commodo nibh non lectus varius blandit. Suspendisse ultricies congue tortor nec varius. Donec sit amet mi sed odio pellentesque porta at nec ante. Duis elementum malesuada leo ac malesuada.
+                </p>
+            </article>
+        </article>
+        <img src="images/study.jpg" alt="person-studying">
+    </div>
+        
+    <div class="footer">
+        <a href="#default" class="logo">E-Course</a>
+        <div class="footer-right">
+            <p>Copyright E-Course Management</p>
+        </div>
+    </div>
+
+<script>
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var modal2 = document.getElementById('id02');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+const pass = document.getElementById('pass');
+const cpsw = document.getElementById('cpsw');
+const msg = document.getElementById('msg');
+const registerBtn = document.getElementById('register');
+registerBtn.disabled = true;
+registerBtn.style.cursor = "not-allowed"
+
+cpsw.addEventListener('keyup', (e) => {
+    if (pass.value !== e.target.value) {
+        msg.style.color = 'red';
+        msg.style.display = 'block';
+        registerBtn.disabled = true;
+        registerBtn.style.cursor = "not-allowed"
+    } else {
+        msg.style.display = 'none';
+        registerBtn.disabled = false;
+        registerBtn.style.cursor = "pointer"
+    }
+});
+
+</script>
+
+</body>
+</html>

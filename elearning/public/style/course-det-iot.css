@@ -1,0 +1,359 @@
+@font-face {
+    font-family: rubik;
+    src: url(../font/Rubik-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: rubik;
+    src: url(../font/Rubik-Regular.ttf);
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #f7f7f7;
+    margin: 0;
+    font-family: rubik;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+ 
+h1 {
+    font-size: 65px;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #d2a2e0;
+    padding: 20px 10px;
+}
+  
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+  
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header a.logo:hover {
+    color: black;
+    background-color: #d2a2e0;
+}
+
+.header a:hover {
+    background-color:#ffd90a;
+    color: black;
+}
+
+.header #signup {
+    background-color: white;
+}
+
+.header-right {
+    float: right;
+}
+
+.footer {
+    padding: 3px;
+    left: 0;
+    bottom: 0;
+    width: 98.45%;
+    background-color: #d2a2e0;
+    color: white;
+    text-align: left;
+    font-family: rubik;
+}
+
+.footer a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.footer a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.footer-right {
+    float: right;
+}
+
+.footer-right p {
+    margin-right: 50px;
+}
+
+.footer {
+    overflow: hidden;
+    background-color: #d2a2e0;
+    padding: 20px 10px;
+}
+
+.content {
+    margin-top: 580px;
+}
+
+.content h3{
+    margin-left: 100px;
+    margin-top: -550px;
+}
+
+.content-ed {
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.row a {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: left;
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+}
+
+.column {
+    float: left;
+    width: 60%;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+}
+  
+.row {
+    margin: 0 -5px;
+    padding-bottom: 25px;
+    margin-left: 100px;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.prev a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.prev a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color: #c174d8;
+    color: white;
+    margin-left: 100px;
+    margin-top: 80px;
+}
+
+.row .column .container-iot .beli-course button {
+    float: left;
+    padding: 10px 10px; 
+    background: #d2a2e0;
+    color: black;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.row .column .container-iot .beli-course button:hover {
+    background-color: #c174d8;
+}
+
+.beli-modal {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.beli-modal .jud {
+    margin-left: 300px;
+    padding: 10px;
+}
+
+.bel-modal {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.beli-modal .bel-modal .belibeli a .yesbtn, .nobtn {
+    float: left;
+    width: 30%;
+    padding: 14px 20px;
+    cursor: pointer;
+    margin-top: 70px;
+}
+
+.beli-modal .bel-modal .belibeli a .yesbtn {
+    background-color:#6bbc75;
+    color: white;
+    margin-left: 100px;
+}
+
+.beli-modal .bel-modal .belibeli a .nobtn{
+    background-color: red;
+    color: white;
+}
+
+.beli-modal .bel-modal .belibeli a .yesbtn:hover {
+    background-color:#5C9D64;
+    color: white;
+}
+
+.beli-modal .bel-modal .belibeli a .nobtn:hover {
+    background-color: #CC1919;
+    color: white;
+}
+
+.edu-det {
+    margin-left: 100px;
+}
+
+.explore {
+    float: right;
+    width: 40%;
+    margin-top: -370px;
+    margin-right: 130px;
+    margin-bottom: 50px;
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #d2a2e0;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #c174d8;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+.dropdown .dropbtn { 
+    float: left;
+    background-color: #d2a2e0;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px; 
+    border: none;
+}
+  
+.dropdown:hover .dropbtn {
+    color: #c174d8;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    .card {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,272 @@
+@font-face {
+    font-family: rubik;
+    src: url(../font/Rubik-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: rubik;
+    src: url(../font/Rubik-Regular.ttf);
+    font-weight: normal;
+}
+
+body { 
+    background-color: #d2a2e0;
+    margin: 0;
+    font-family: rubik;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+ 
+h1 {
+    font-size: 65px;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #d2a2e0;
+    padding: 20px 10px;
+}
+  
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+  
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header a.logo:hover {
+    color: black;
+    background-color: #d2a2e0;
+}
+
+.header a:hover {
+    background-color:#ffd90a;
+    color: black;
+}
+
+.header #signup {
+    background-color: white;
+}
+
+.header-right {
+    float: right;
+}
+
+.content {
+    margin-top: 580px;
+    margin-bottom: 450px;
+}
+
+.content h3{
+    margin-left: 100px;
+    margin-top: -470px;
+}
+
+.content article p {
+    width: 430px;
+    word-wrap: break-word;
+    float: left;
+    margin-left: 100px;
+    line-height: 1.3;
+    text-align: justify;
+}
+
+.footer {
+    padding: 3px;
+    left: 0;
+    bottom: 0;
+    width: 98.45%;
+    background-color: #d2a2e0;
+    color: white;
+    text-align: left;
+    font-family: rubik;
+}
+
+.footer a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.footer a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.footer-right {
+    float: right;
+}
+
+.footer-right p {
+    margin-right: 50px;
+}
+
+.footer {
+    overflow: hidden;
+    background-color: #d2a2e0;
+    padding: 20px 10px;
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #d2a2e0;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: black;
+}
+
+ul.breadcrumb li a:hover {
+    color: #c174d8;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+.dropdown .dropbtn { 
+    float: left;
+    background-color: #d2a2e0;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px; 
+    border: none;
+}
+  
+.dropdown:hover .dropbtn {
+    color: #c174d8;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.team {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin-left: 100px;
+    text-align: center;
+    background-color: #e5bbf1;
+}
+ 
+.team h2 {
+    color: #91639e;
+}
+  
+.team button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+  
+.team a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+  
+.team button:hover, .team a:hover {
+    opacity: 0.7;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow-container img {
+    float: right;
+    width: 40%;
+    margin-right: 50px;
+    margin-top: -400px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active {
+    background-color: #717171;
+}
+
+.visimisi h3{
+    margin-top: -543px;
+    margin-left: 635px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+.visimisi article p {
+    width: 430px;
+    word-wrap: break-word;
+    float: right;
+    margin-right: 200px;
+    margin-top: -10px;
+    line-height: 1.3;
+    text-align: justify;
+}
